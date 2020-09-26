@@ -2,8 +2,14 @@ class Shoe
   attr_accessor :color, :size, :material, :condition
   attr_reader :brand
 
+  BRANDS=[]
+  
   def initialize(brand)
     @brand = brand
+    if BRANDS.none?(brand)
+    BRANDS << brand
+  end
+    #instant variable starts with an @symbol. without @ ruby would think this is a local variable, not in the entire class
   end
 
   def cobble
