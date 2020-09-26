@@ -6,7 +6,7 @@ class Shoe
   
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
+    BRANDS << brand.uniq
     #instant variable starts with an @symbol. without @ ruby would think this is a local variable, not in the entire class
   end
 
